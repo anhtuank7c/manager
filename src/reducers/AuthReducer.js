@@ -15,7 +15,6 @@ const INITIAL_STATE = {
 };
 
 export default (state = INITIAL_STATE, action) => {
-    console.log(action);
     switch (action.type) {
         case EMAIL_CHANGED:
             // return new state object with all current props,

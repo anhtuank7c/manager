@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 
 const CardSection = (props) => (
-  <View style={styles.cardSectionContainer}>
+  <View style={[styles.cardSectionContainer, props.style]}>
     {props.children}
   </View>
 );
@@ -15,6 +15,7 @@ const styles = {
     borderColor: '#ddd',
     padding: 5,
     backgroundColor: '#fff',
+    position: 'relative'
   }
 };
 
