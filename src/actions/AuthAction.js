@@ -6,7 +6,8 @@ import {
     PASSWORD_CHANGED,
     LOGIN_USER_SUCCESS,
     LOGIN_USER_FAIL,
-    LOGIN_USER
+    LOGIN_USER,
+    LOGOUT_USER
 } from './types';
 
 export const emailChanged = (text) => {
@@ -36,6 +37,15 @@ export const loginUser = ({ email, password }) => {
     };
 };
 
+export const logout = () => {
+    return (dispatch) => {
+        dispatch({
+            type: LOGOUT_USER
+        });
+        Actions.login();
+    };
+};
+
 // helper functions bellow
 
 const loginUserFail = (dispatch, error) => {
@@ -50,5 +60,5 @@ const loginUserSuccess = (dispatch, user) => {
         payload: user
     });
 
-    Actions.main();
+    Actions.main({ type: 'reset' });
 };

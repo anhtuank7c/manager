@@ -55,7 +55,7 @@ class EmployeeCreate extends Component {
                     </Picker>
                 </CardSection>
                 <CardSection>
-                    <Button onPress={() => this.onButtonPress()}>Save</Button>
+                    <Button onPress={() => this.onButtonPress()}>Create</Button>
                 </CardSection>
             </Card>
         );
