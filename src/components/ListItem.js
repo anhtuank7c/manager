@@ -7,14 +7,14 @@ import { CardSection } from './common';
 class ListItem extends Component {
 
     onItemPress() {
-        Actions.employeeCreate({ employee: this.props.employee });
+        Actions.employeeEdit({ employee: this.props.employee });
     }
 
     render() {
         const { name, uid } = this.props.employee;
         return (
             <TouchableWithoutFeedback
-                onPress={this.onItemPress} >
+                onPress={this.onItemPress.bind(this)} >
                 <View>
                     <CardSection key={uid}>
                         <Text style={styles.titleStyle}>

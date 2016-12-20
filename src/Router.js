@@ -1,9 +1,9 @@
 import React from 'react';
 import { Actions, Scene, Router } from 'react-native-router-flux';
-import firebase from 'firebase';
 import LoginForm from './components/LoginForm';
 import EmployeeList from './components/EmployeeList';
 import EmployeeCreate from './components/EmployeeCreate';
+import EmployeeEdit from './components/EmployeeEdit';
 import Profile from './components/Profile';
 
 const RouterComponent = () => {
@@ -24,6 +24,11 @@ const RouterComponent = () => {
                     key="employeeCreate"
                     component={EmployeeCreate}
                     title="Create Employee"
+                    direction="vertical" />
+                <Scene
+                    key="employeeEdit"
+                    component={EmployeeEdit}
+                    title="Edit Employee"
                     direction="vertical" />
                 <Scene key="profile" component={Profile} title="Profile" />
             </Scene>
